@@ -1,8 +1,8 @@
 function Header(){
     return (
-        <div>
+        <div className="box">
             <h1>AOURAR ABDELOUAHAB</h1>
-            <h1>AI STUDENT (AT ENSIA )</h1>
+            <h1 className="text-[#00FE00]">AI STUDENT (AT ENSIA )</h1>
         </div>
     )
 }

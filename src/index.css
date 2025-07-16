@@ -1,8 +1,25 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Ubuntu Mono", monospace;
+}
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, hsl(0, 0%, 20%), hsl(0, 0%, 10%), hsl(0, 0%, 7%));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@layer base {
+  h1 {
+    @apply text-xl text-white text-center;
+  }
+}
+@layer components {
+  .box {
+    @apply border-solid border-1 border-[#00FE00] inline-flex flex-col
+  }
 }
