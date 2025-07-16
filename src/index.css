@@ -20,6 +20,6 @@ body{
 }
 @layer components {
   .box {
-    @apply border-solid border-1 border-[#00FE00] inline-flex flex-col
+    @apply border-solid border-1 border-[#00FE00] inline-flex flex-col bg-black
   }
 }
