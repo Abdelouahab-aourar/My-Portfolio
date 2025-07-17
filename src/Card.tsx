@@ -5,7 +5,7 @@ import logo from "./assets/logo.png"
 function Card(){
     return(
     <>
-        <div className="box w-[40vw] h-[81vh] items-center mx-[0.5vw] my-[1vh] justify-center">
+        <div className="box w-[40vw] h-[81vh] items-center mr-[0.5vw] my-[1vh] justify-center">
             <div className="box rounded-full mb-[5vh]"><img src={logo} alt="My Logo" className="w-[20vw]"/></div>
             <h1 className="text-[#00FE00] mb-[5vh] text-4xl">CONTACT ME</h1>
             <div className="flex items-center justify-center gap-x-6">
