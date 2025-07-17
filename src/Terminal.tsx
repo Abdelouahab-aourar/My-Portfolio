@@ -98,6 +98,6 @@ const TerminalComponent = () => {
     };
   }, []);
 
-  return <div ref={containerRef} />;
+  return <div ref={containerRef} className="h-[100%]"/>;
 };
 export default TerminalComponent;
