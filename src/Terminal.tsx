@@ -98,6 +98,6 @@ const TerminalComponent = () => {
     };
   }, []);
 
-  return <div ref={containerRef} className="h-[100%] scrollbar-rounded-full"/>;
+  return <div ref={containerRef} className="h-full w-full"/>;
 };
 export default TerminalComponent;
