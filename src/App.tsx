@@ -1,5 +1,6 @@
 import Header from "./Header"
 import Card from "./Card"
+import TerminalComponent from "./Terminal"
 function App() {
   return (
     <>
@@ -9,7 +10,9 @@ function App() {
       </div>
       <div className="flex items-center  mx-[0.5vw]">
         <Card/>
-        <div className="box h-[81vh] w-[60vw]"></div>
+        <div className="box h-[81vh] w-[60vw]">
+          <TerminalComponent/>
+        </div>
       </div>
     </>
   )
