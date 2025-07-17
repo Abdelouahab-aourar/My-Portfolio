@@ -31,7 +31,7 @@ const TerminalComponent = () => {
     let history: string[] = [];
     let histIdx = -1;
 
-    const prompt = () => term.write("\r\nabdelouahab@portfolio$> ");
+    const prompt = () => term.write(`${C.red}\r\nabdelouahab@portfolio$> ${C.reset}`);
     term.writeln("Welcome To My Portflio! Type help for more info");
     prompt();
 
