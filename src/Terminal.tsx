@@ -21,7 +21,7 @@ const TerminalComponent = () => {
     fit.fit();
 
     const commands = {
-      help: `${C.green}Commands:${C.reset} help, about, clear`,
+      help: `${C.green}Available Commands:${C.reset} \r\nhelp, about, clear`,
       about: `${C.cyan}I'm a React/TS developer.${C.reset}`,
       abo: "I'm a React/TS developer.",
       clear: "__CLEAR__",
@@ -39,11 +39,13 @@ const TerminalComponent = () => {
       if (data === "\r") { // Enter
         term.write("\r\n");
         const cmd = (input.trim()).toLowerCase();
-        if (cmd) history.push(cmd);
-        histIdx = -1;
-        const output = commands[cmd] ?? `Unknown: ${cmd}`;
-        if (output === "__CLEAR__") term.clear();
-        else term.writeln(output);
+        if (cmd){
+          history.push(cmd);
+          histIdx = -1;
+          const output = commands[cmd] ?? `Unknown: ${cmd}`;
+          if (output === "__CLEAR__") term.clear();
+          else term.writeln(output);
+        }
         input = "";
         prompt();
       } else if (data === "\u007f") { // Backspace
@@ -52,7 +54,7 @@ const TerminalComponent = () => {
           term.write("\b \b");
         }
       } else if (data === "\t") { // Tab
-        const matches = Object.keys(commands).filter(c => c.startsWith(input));
+        const matches = Object.keys(commands).filter(c => c.startsWith(input.toLowerCase()));
         if (matches.length === 1) {
           const rest = matches[0].slice(input.length);
           input = matches[0];
