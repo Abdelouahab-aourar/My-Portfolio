@@ -22,7 +22,7 @@ A developer portfolio designed to look and feel like a real terminal. Built with
 
 ## 📸 Screenshots
 
-
+![Terminal Screenshot](./src/assets/portfolio.png)
 ---
 
 ## 🛠️ Built With
