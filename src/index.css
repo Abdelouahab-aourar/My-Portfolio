@@ -31,3 +31,6 @@ body{
   background-color: hsl(0, 0%, 10%);
   border-radius: 8px;
 }
+.xterm {
+  padding-right: 1vw;
+}

@@ -10,7 +10,7 @@ function App() {
       </div>
       <div className="flex items-center  mx-[0.5vw] max-md:flex-col">
         <Card/>
-        <div className="box h-[81vh] w-[60vw] p-[10px] max-md:w-[92vw]">
+        <div className="box h-[81vh] w-[60vw] p-[10px] pr-[0px] max-md:w-[92vw]">
           <TerminalComponent/>
         </div>
       </div>
