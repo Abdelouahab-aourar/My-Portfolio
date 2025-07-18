@@ -27,7 +27,7 @@ const TerminalComponent = () => {
     term.open(containerRef.current!);
     fit.fit();
 
-    const commands = {
+    const commands: { [key: string]: string } ={
       help: `\n${C.green}Available Commands:${C.reset}
                       \r\n${C.red}help${C.reset} \t\t ${C.yellow}- List The Available Commands.${C.reset}
                       \r\n${C.red}about${C.reset} \t\t ${C.yellow}- Learn more about me.${C.reset}
@@ -90,7 +90,7 @@ const TerminalComponent = () => {
         if (cmd){
           history.push(cmd);
           histIdx = -1;
-          const output = commands[cmd] ?? `Unknown: ${cmd}`;
+          const output = commands[cmd] ?? `${C.red}Command Not Found:${C.reset} ${cmd}`;
           if (output === "__CLEAR__") term.clear();
           else term.writeln(output);
         }
