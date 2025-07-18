@@ -16,7 +16,7 @@ A developer portfolio designed to look and feel like a real terminal. Built with
 
 ## 🚀 Live Demo
 
-[👉 View Live](https://your-portfolio-url.com)  
+[👉 View Live](https://abdelouahabaourar.vercel.app)  
 
 ---
 
