@@ -16,7 +16,6 @@ const TerminalComponent = () => {
   useEffect(() => {
     const term = new Terminal({
       cursorBlink: true,
-      lineWrap: true, 
       });
     const fit = new FitAddon();
     term.loadAddon(fit);
@@ -29,8 +28,8 @@ const TerminalComponent = () => {
                       \r\n${C.red}about${C.reset} \t\t ${C.yellow}- Learn more about me.${C.reset}
                       \r\n${C.red}projects${C.reset} \t ${C.yellow}- View a list of projects I've worked on.${C.reset}
                       \r\n${C.red}skills${C.reset} \t\t ${C.yellow}- See the tools and languages I specialize in.${C.reset}
-                      \r\n${C.red}education${C.reset} \t ${C.yellow}- Get information about my academic background.${C.reset}
-                      \r\n${C.red}contact${C.reset} \t ${C.yellow}- Find out how to get in touch with me.${C.reset}`,
+                      \r\n${C.red}contact${C.reset} \t ${C.yellow}- Find out how to get in touch with me.${C.reset}
+                      \r\n${C.red}clear${C.reset} \t\t ${C.yellow}- Clear The Terminal.${C.reset}`,
       about: `\nHi, I'm ${C.red}AOURAR ABDELOUAHAB${C.reset}, Second Year Student At ${C.green}ENSIA${C.reset},${C.cyan} Graphic Designer${C.reset} And ${C.cyan}Web Developer${C.reset}.\r\nI enjoy crafting interactive user interfaces and building ${C.green}fast${C.reset}, ${C.green}accessible${C.reset}, and ${C.green}maintainable${C.reset} web applications.\r\nI focus on writing ${C.yellow}clean${C.reset}, ${C.yellow}efficient code${C.reset} and continuously learning ${C.yellow}new tools${C.reset} and ${C.yellow}best practices${C.reset}.\r\nWhen I'm not coding, you'll find me exploring ${C.cyan}new tech trends${C.reset}, or improving ${C.cyan}my personal portfolio.${C.reset}`,
       clear: "__CLEAR__",
     };
