@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Terminal } from "@xterm/xterm";
 import { FitAddon } from "@xterm/addon-fit";
+import { WebLinksAddon } from "@xterm/addon-web-links";
 import "@xterm/xterm/css/xterm.css";
 
  const C = {
@@ -18,7 +19,9 @@ const TerminalComponent = () => {
       cursorBlink: true,
       });
     const fit = new FitAddon();
+    const webLinksAddon = new WebLinksAddon();
     term.loadAddon(fit);
+    term.loadAddon(webLinksAddon);
     term.open(containerRef.current!);
     fit.fit();
 
@@ -31,6 +34,8 @@ const TerminalComponent = () => {
                       \r\n${C.red}contact${C.reset} \t ${C.yellow}- Find out how to get in touch with me.${C.reset}
                       \r\n${C.red}clear${C.reset} \t\t ${C.yellow}- Clear The Terminal.${C.reset}`,
       about: `\nHi, I'm ${C.red}AOURAR ABDELOUAHAB${C.reset}, Second Year Student At ${C.green}ENSIA${C.reset},${C.cyan} Graphic Designer${C.reset} And ${C.cyan}Web Developer${C.reset}.\r\nI enjoy crafting interactive user interfaces and building ${C.green}fast${C.reset}, ${C.green}accessible${C.reset}, and ${C.green}maintainable${C.reset} web applications.\r\nI focus on writing ${C.yellow}clean${C.reset}, ${C.yellow}efficient code${C.reset} and continuously learning ${C.yellow}new tools${C.reset} and ${C.yellow}best practices${C.reset}.\r\nWhen I'm not coding, you'll find me exploring ${C.cyan}new tech trends${C.reset}, or improving ${C.cyan}my personal portfolio.${C.reset}`,
+      projects: `\n${C.red}RedVolt Gear${C.reset} \t\t\t - RedVolt Gear is a sleek, animated ${C.yellow}React-based e-commerce website${C.reset} built to showcase and sell high-quality ${C.yellow}laptop accessories${C.reset}.\r\n\n${C.red}Tic Tac Toe GUI${C.reset} \t\t - Tic Tac Toe ${C.yellow}Game${C.reset} implemented using ${C.yellow}C++${C.reset} with a ${C.yellow}graphical user interface${C.reset} using the library ${C.yellow}SDL2${C.reset}, Co-Created with TRARI MOHAMMED EL MEHDI.\r\n\n${C.red}Portfolio (Terminal Theme)${C.reset} \t - A developer portfolio built using ${C.yellow}React${C.reset}, ${C.yellow}TypeScript${C.reset}, and ${C.yellow}xterm.js${C.reset}.Styled with ${C.yellow}TailwindCSS${C.reset}, this terminal interface mimics a command-line experience for showcasing my work and skills in a fun, interactive way.`,
+      skills: `\n`,
       clear: "__CLEAR__",
     };
 
